@@ -44,7 +44,7 @@ Scene house() {
 // loads bunny model
 Scene bunny() {
 	// only absolute path made it render properly
-	auto bunny = assimpLoad("C:\\Users\\helen\\Downloads\\homework-4\\models\\bunny.obj");
+	auto bunny = assimpLoad("C:\\Users\\Helen\\ComputerGraphics\\obj-rendering\\homework-4\\models\\bunny.obj");
 	std::cout << "Current Path: " << std::filesystem::current_path() << std::endl;
 
 	bunny.grow(glm::vec3(20, 20, 20));
@@ -58,7 +58,7 @@ Scene bunny() {
 // extra test to run miku model
 Scene miku() {
 	// only absolute path made it render properly
-	auto miku = assimpLoad("C:\\Users\\helen\\Downloads\\homework-4\\models\\HatsuneMiku.obj");
+	auto miku = assimpLoad("C:\\Users\\Helen\\ComputerGraphics\\obj-rendering\\homework-4\\models\\HatsuneMiku.obj");
 
 	miku.grow(glm::vec3(1.15, 1.15, 1.15));
 	miku.move(glm::vec3(-2.4, -2.2, -2.5));
@@ -75,8 +75,8 @@ int main() {
 	// Construct the scene.
 	//Scene myScene = cube();
 	//Scene myScene = house();
-	//Scene myScene = bunny();
-	Scene myScene = miku(); // extra test to run a different model
+	Scene myScene = bunny();
+	//Scene myScene = miku(); // extra test to run a different model
 
 	// For convenience, create a local reference to a specific object in the scene.
 	Object3D& obj = myScene.objects[0];
